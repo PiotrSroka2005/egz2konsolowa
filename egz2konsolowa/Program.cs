@@ -27,6 +27,25 @@
                 }
             }
 
+            SitoErastotelesa(A, n);
+
+            Console.WriteLine("Liczby z pierwsze z przedziału od 2 do n: ");
+
+            bool pierwszy = true;
+
+            for (int i = 2; i <= n; i++)
+            {
+                if (A[i])
+                {
+                    if (!pierwszy)
+                    {
+                        Console.Write(", ");
+                    }
+                    Console.Write(i);
+                    pierwszy = false;
+                }
+            }
+
         }
     }
 }
