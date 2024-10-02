@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int n = 100;
+
+            bool[] A = new bool[n + 1];
+
+            for (int i = 2; i <= n; i++)
+            {
+                A[i] = true;
+            }
         }
     }
 }
