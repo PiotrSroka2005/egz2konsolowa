@@ -13,21 +13,29 @@
                 A[i] = true;
             }
 
-            static void SitoErastotelesa(bool[] tab, int n)
+            /*******************************************************
+             nazwa funkcji: SitoEratostenesa
+             parametry wejściowe: A-tablica wartości logicznych, n-koniec przedziału
+             wartość zwracana: brak
+             informacje: funkcja sprawdza wielokrotności , liczb o 2 do n
+             autor: Piotr Sroka
+            *******************************************************/
+
+            static void SitoEratostenesa(bool[] A, int n)
             {
                 for (int i = 2; i * i <= n; i++)
                 {
-                    if (tab[i])
+                    if (A[i])
                     {
                         for (int j = i * i; j <= n; j += i)
                         {
-                            tab[j] = false;
+                            A[j] = false;
                         }
                     }
                 }
             }
 
-            SitoErastotelesa(A, n);
+            SitoEratostenesa(A, n);
 
             Console.WriteLine("Liczby z pierwsze z przedziału od 2 do n: ");
 
