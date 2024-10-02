@@ -12,6 +12,21 @@
             {
                 A[i] = true;
             }
+
+            static void SitoErastotelesa(bool[] tab, int n)
+            {
+                for (int i = 2; i * i <= n; i++)
+                {
+                    if (tab[i])
+                    {
+                        for (int j = i * i; j <= n; j += i)
+                        {
+                            tab[j] = false;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
